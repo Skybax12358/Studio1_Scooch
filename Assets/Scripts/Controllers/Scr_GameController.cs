@@ -4,7 +4,10 @@ using System.Collections;
 public class Scr_GameController : MonoBehaviour {
 
     public static Scr_GameController instance;
+
     public Scr_SceneController sceneController;
+
+    public Scr_LevelController levelController;
 
     void Awake()
     {
@@ -13,6 +16,9 @@ public class Scr_GameController : MonoBehaviour {
 
         gameObject.AddComponent<Scr_SceneController>();
         sceneController = GetComponent<Scr_SceneController>();
+
+        gameObject.AddComponent<Scr_LevelController>();
+        levelController = GetComponent<Scr_LevelController>();
     }
 
 	// Use this for initialization

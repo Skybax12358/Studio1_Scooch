@@ -27,18 +27,14 @@ public class Scr_ParkTarget : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(Scr_LevelController.instance.playerParked)
+        if(currentColliders == colliderRequirements)
         {
-            GetComponent<Renderer>().material = completeMaterial;
-        }
-        else if(currentColliders == colliderRequirements)
-        {
-            Scr_LevelController.instance.playerInPark = true;
+            Scr_GameController.instance.levelController.playerInPark = true;
             GetComponent<Renderer>().material = activeMaterial;
         }
         else
         {
-            Scr_LevelController.instance.playerInPark = false;
+            Scr_GameController.instance.levelController.playerInPark = false;
             GetComponent<Renderer>().material = inactiveMaterial;
         }
     }

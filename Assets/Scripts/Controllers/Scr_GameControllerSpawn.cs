@@ -10,7 +10,6 @@ public class Scr_GameControllerSpawn : MonoBehaviour {
     {
         if (GameObject.FindGameObjectWithTag("GameController") == false)
         {
-            Debug.Log("Spawn character controller");
             GameObject GameController = Instantiate<GameObject>(gameController);
         }
         Destroy(this.gameObject);
