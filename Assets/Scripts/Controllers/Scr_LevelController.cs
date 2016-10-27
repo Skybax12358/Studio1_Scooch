@@ -36,15 +36,13 @@ public class Scr_LevelController : MonoBehaviour {
             playerParked = false;
         }
 
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetAxis("Reset") > 0)
         {
-            sceneController.LoadScene("Sce_Level_1");
-        }
-        else if(Input.GetKeyDown(KeyCode.W))
-        {
-            sceneController.LoadScene("Sce_Level_2");
+            sceneController.ResetScene();
         }
 	}
+    
+
 
     void ResetCar()
     {
